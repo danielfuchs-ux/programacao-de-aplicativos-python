@@ -24,3 +24,5 @@ class Funcionario:
 
 Jair = Funcionario("Jair", 3000)
 Jair.apresentar()
+
+class Gerente(Funcionario):
