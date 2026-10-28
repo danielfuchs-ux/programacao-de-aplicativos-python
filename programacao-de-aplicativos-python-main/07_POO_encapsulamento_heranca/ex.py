@@ -20,9 +20,27 @@ class Funcionario:
         self.__salario = self.__salario * (1 + porcentagem / 100)
         print(f"{self.nome} recebeu {porcentagem}% de aumento.")
 
-##################################################################
+class Gerente(Funcionario):
+    def __init__(self, nome, salario, equipe):
+        super().__init__(nome, salario)
+        self.equipe = equipe
+
+    def mostrar_equipe(self):
+        print(f"{self.nome} é responsável por {self.equipe} pessoas em sua equipe.")
+
+class Estagiario(Funcionario):
+    def __init__(self, nome, salario, curso):
+        super(). __init__(nome, salario)
+        self.curso = curso
+
+###################################################################
+
+Fulano = Gerente("Fulano", 8000, 5)
+Fulano.apresentar()
+Fulano.mostrar_equipe()
 
 Jair = Funcionario("Jair", 3000)
 Jair.apresentar()
 
-class Gerente(Funcionario):
+Jubiscrevaldo = Estagiario("Jubiscrevaldo", 1500, "Desenvolvimento de Sistemas")
+Jubiscrevaldo.apresentar()
